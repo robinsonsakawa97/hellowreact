@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+class  Counter extends Component {
+    state={
+        count:22,
+        imageURL: "https://picsum.photos/200"
+             
+    };
+    render() { 
+        return<div>
+        
+     <span>{this.formatCount()}</span>
+        <button>the famous</button>
+        <img  src={this.state.imageURL} alt=""></img></div>;
+    }
+    formatCount(){
+        const { count }= this.state;
+        return count===0 ? "zero" : count;
+    }
+}
+ 
+export default  Counter;
